@@ -1,3 +1,59 @@
-body {
-  
+.container {
+  background-color: green;
+  height: 800px;
+  width:80%;
+  margin: auto;
+
+}
+
+.mini {
+  background-color: black;
+  height: 800px;
+  width : 50%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.highscore {
+  background-color: black;
+  float: left;
+  margin: 20px;
+  width: 20%;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.yourscore {
+  background-color: black;
+  float: right;
+  margin: 20px;
+  width: 20%;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+
+.tracklines {
+  margin: 25px;
+}
+
+.line {
+  /* background-color: white; */
+  height: 100px;
+  width: 3%;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: inline-block;
+}
+
+#line1 {
+  margin-left: 90px;
+}
+
+.line_1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: white;
+  height: 70px;
 }
