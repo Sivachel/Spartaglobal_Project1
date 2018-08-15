@@ -1,16 +1,17 @@
-.container {
+.bigContainer {
   background-color: green;
   height: 800px;
-  width:80%;
+  width:1140px;
   margin: auto;
 }
 
-.mini {
+.container {
   background-color: black;
   height: 800px;
-  width : 50%;
+  width : 570px;
   margin: auto;
   overflow: hidden;
+  position: relative;
 }
 
 .highscore {
@@ -66,8 +67,9 @@
 
 #car {
   bottom: 8%;
-  left: 31%;
+  left: 60%;
   background-color:red;
+  /* position: absolute; */
 }
 
 .f_glass {
