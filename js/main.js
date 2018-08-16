@@ -5,19 +5,19 @@ $(document).ready(function() {
   var container = $('.container');
   var highscore = $('.highscore');
   var yourscore = $('.yourscore');
-  var line1 = $('#line1');
-  var line2 = $('#line2');
-  var line3 = $('#line3');
-  var line4 = $('#line4');
+  var line_1 = $('#line_1');
+  var line_2 = $('#line_2');
+  var line_3 = $('#line_3');
+  var line_4 = $('#line_4');
   var car = $('#car');
-  var car1 = $('#car_1');
-  var car2 = $('#car_2');
-  var car3 = $('#car_3');
-  var car4 = $('#car_4');
+  var car_1 = $('#car_1');
+  var car_2 = $('#car_2');
+  var car_3 = $('#car_3');
+  var car_4 = $('#car_4');
   var player2turndiv = $('#player2turndiv')
   var player2turn_btn = $('#player2turn');
-  var restart_div = $('#restart');
-  var restart_btn = $('.restartdiv')
+  var restart_div = $('#restart_div');
+  var restart_btn = $('#restart')
 
 // Moving user car up, down, right and left
 // declaring initial variables
@@ -66,6 +66,9 @@ $(document).ready(function() {
   var container_height = parseInt(container.height());
   var car_width = parseInt(car.width());
   var car_height = parseInt(car.height());
+  var score_counter = 1;
+  var speed = 2;
+  var line_speed = 5;
 // function for controls
   function left() {
     if (game_over == false && parseInt(car.css('left')) > 0) {
@@ -94,34 +97,19 @@ $(document).ready(function() {
 // Repeat function for tracks and other cars
   animateWhole = requestAnimationFrame(repeat);
   function repeat() {
-    if (collision(car,car_1) || collision(car,car_2) || collision(car,car_3) || collision(car,car_4)){
-      stop_game();
-      return;
-    }
-    var score_counter = 1;
-    var speed = 2;
-    var line_speed = 5;
-
-    score_counter++;
-    if (score_counter % 2 == 0) {
-      yourscore.text(parseInt(yourscore.text()) + 1);
-    }
-    if (score_counter % 500 == 0) {
-      speed++;
-      line_speed++;
-    }
-
     car_down(car_1);
     car_down(car_2);
     car_down(car_3);
     car_down(car_4);
-    line_down(line1);
-    line_down(line2);
-    line_down(line3);
-    line_down(line4);
+    line_down(line_1);
+    line_down(line_2);
+    line_down(line_3);
+    line_down(line_4);
 
     animateWhole = requestAnimationFrame(repeat);
-  }
+    }
+
+
 
   function car_down(car) {
     var car_current_top = parseInt(car.css('top'));
@@ -135,40 +123,12 @@ $(document).ready(function() {
   function line_down(line) {
     var line_current_top = parseInt(line.css('top'));
     if (line_current_top > container_height) {
-      line_current_top = -300;
+      line_current_top = -100;
     }
     line.css('top', line_current_top + line_speed);
   }
-  restart_btn.click(function(){
-    location.reload();
-  });
-  function stop_game () {
-    game_over = true;
-    cancelAnimationFrame(animateWhole);
-    cancelAnimationFrame(move_right);
-    cancelAnimationFrame(move_left);
-    cancelAnimationFrame(move_up);
-    cancelAnimationFrame(move_down);
-    restart.div.slidedown();
-    restart_btn.focus();
-  }
-// Collision function
-  function collision($div1, $div2) {
-    var x1 = $div1.offset().left;
-    var y1 = $div1.offset().top;
-    var h1 = $div1.outerHeight(true);
-    var w1 = $div1.outerWidth(true);
-    var b1 = y1 + h1;
-    var r1 = x1 + w1;
-    var x2 = $div2.offset().left;
-    var y2 = $div2.offset().top;
-    var h2 = $div2.outerHeight(true);
-    var w2 = $div2.outerWidth(true);
-    var b2 = y2 + h2;
-    var r2 = x2 + w2;
 
-    if (b1 < y2 || y1 > b2 || r1 < x2 || x1 > r2) return false;
-    return true;
-  }
+
+
 
 });

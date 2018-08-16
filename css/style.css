@@ -34,28 +34,35 @@
   font-size: 40px;
 }
 
-.tracklines {
-  margin: 25px;
-}
-
-.line {
-  height: 100px;
-  width: 3%;
-  margin-left: 50px;
-  margin-right: 50px;
-  display: inline-block;
-}
-
-#line1 {
-  margin-left: 90px;
-}
-
 .line_1 {
+  position: absolute;
+  height: 150px;
+  width: 4%;
+  margin-left:48%;
+  background-color: white;
+}
+
+#line_1 {
+  top: -150px;
+}
+#line_2 {
+  top: 150px;
+}
+
+#line_3 {
+  top: 450px;
+}
+
+#line_4 {
+  top: 750px;
+}
+
+/* .line_1 {
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: white;
   height: 70px;
-}
+} */
 
 .car {
   position: absolute;
@@ -69,7 +76,7 @@
   bottom: 8%;
   left: 60%;
   background-color:red;
-  /* position: absolute; */
+  position: absolute;
 }
 
 .f_glass {
@@ -180,6 +187,6 @@
   display: none;
 }
 
-#Player2turn{
+#player2turndiv{
   display: none;
 }
