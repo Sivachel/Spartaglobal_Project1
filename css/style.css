@@ -161,7 +161,7 @@
 
 #car_1 {
   bottom: 20%;
-  left: 64%;
+  left: 78%;
   background-color:blue;
 }
 
@@ -184,9 +184,25 @@
 }
 
 #restart {
-  display: none;
+  border: none;
+  padding: 25px;
+  color: white;
+  background-color: blue;
+  font-size: 30px;
+  margin-top: 5%;
+  margin-left: 40%;
+  position: relative;
+  z-index: 1000;
 }
 
-#player2turndiv{
-  display: none;
+#player2turn{
+  border: none;
+  padding: 25px;
+  color: white;
+  background-color: blue;
+  font-size: 30px;
+  margin-top: 20%;
+  margin-left: 39%;
+  position: relative;
+  z-index: 1000;
 }
