@@ -1,16 +1,17 @@
-.container {
+.bigContainer {
   background-color: green;
   height: 800px;
-  width:80%;
+  width:1140px;
   margin: auto;
 }
 
-.mini {
+.container {
   background-color: black;
   height: 800px;
-  width : 50%;
+  width : 570px;
   margin: auto;
   overflow: hidden;
+  position: relative;
 }
 
 .highscore {
@@ -33,28 +34,35 @@
   font-size: 40px;
 }
 
-.tracklines {
-  margin: 25px;
-}
-
-.line {
-  height: 100px;
-  width: 3%;
-  margin-left: 50px;
-  margin-right: 50px;
-  display: inline-block;
-}
-
-#line1 {
-  margin-left: 90px;
-}
-
 .line_1 {
+  position: absolute;
+  height: 150px;
+  width: 4%;
+  margin-left:48%;
+  background-color: white;
+}
+
+#line_1 {
+  top: -150px;
+}
+#line_2 {
+  top: 150px;
+}
+
+#line_3 {
+  top: 450px;
+}
+
+#line_4 {
+  top: 750px;
+}
+
+/* .line_1 {
   margin-top: 30px;
   margin-bottom: 30px;
   background-color: white;
   height: 70px;
-}
+} */
 
 .car {
   position: absolute;
@@ -66,8 +74,9 @@
 
 #car {
   bottom: 8%;
-  left: 31%;
+  left: 60%;
   background-color:red;
+  position: absolute;
 }
 
 .f_glass {
@@ -152,7 +161,7 @@
 
 #car_1 {
   bottom: 20%;
-  left: 64%;
+  left: 78%;
   background-color:blue;
 }
 
@@ -175,9 +184,25 @@
 }
 
 #restart {
-  display: none;
+  border: none;
+  padding: 25px;
+  color: white;
+  background-color: blue;
+  font-size: 30px;
+  margin-top: 5%;
+  margin-left: 40%;
+  position: relative;
+  z-index: 1000;
 }
 
-#Player2turn{
-  display: none;
+#player2turn{
+  border: none;
+  padding: 25px;
+  color: white;
+  background-color: blue;
+  font-size: 30px;
+  margin-top: 20%;
+  margin-left: 39%;
+  position: relative;
+  z-index: 1000;
 }
